@@ -6,6 +6,7 @@ struct node
     int key; 
     struct node *left, *right; 
 }; 
+//creating new node
 struct node *newNode(int item) 
 { 
     struct node *temp =  (struct node *)malloc(sizeof(struct node)); 
@@ -13,6 +14,7 @@ struct node *newNode(int item)
     temp->left = temp->right = NULL; 
     return temp; 
 } 
+// inserting new node
 struct node* insert(struct node* node, int key) 
 { 
    if (node == NULL) return newNode(key); 
@@ -21,7 +23,7 @@ struct node* insert(struct node* node, int key)
    else if (key > node->key) 
    node->right = insert(node->right, key);    
 }
-
+// here, we find the height of a tree
 height(struct node* k)
 {
 int h;
@@ -63,7 +65,7 @@ else("R,L rotation");
 else
 printf("is balanced");
 }
-
+//This is inorder traversal of tree.
 void inorder(struct node *root) 
 { 
     if (root != NULL) 
@@ -88,6 +90,16 @@ struct node *root = NULL;
     insert(root, 5); 
     insert(root, 6); 
     inorder(root);
+   int a,b,c,d,x,y,z;
+   a=b+c;
+   b=c+d;
+   c=a+d;
+   d=a+b;
+   d=c+d;
+   x=y+z;
+   y=z+x;
+   z=x+y;
+   
 }
        
     
